@@ -17,7 +17,7 @@ jobs:
         APP_NAME: ${{ 'books-api-yc' }}
       run: |
         cd ./
-        docker login --username=zakariaelhaouari --password=$HEROKU_API_KEY registry.heroku.com
+        docker login --username=zakaria.elhaouarii99@gmail.com --password=$HEROKU_API_KEY registry.heroku.com
         heroku container:push web -a $APP_NAME
         heroku container:release web -a $APP_NAME
  
