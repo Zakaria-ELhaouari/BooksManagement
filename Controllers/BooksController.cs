@@ -26,9 +26,10 @@ namespace BooksManagement.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<Book>> GetBooks(int id)
+        public async Task<Book> GetBooks(int id)
         {
-            return await _bookRepositorie.Get(id);
+            var book = await _bookRepositorie.Get(id);
+            return book;
         }
 
         [HttpPost]
